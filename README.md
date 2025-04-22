@@ -1,14 +1,14 @@
 # desafio-tela-login-V0
 
-Aja como um desenvolvedor frontend especializado em UI/UX moderno, com domínio em HTML, Tailwind CSS, DaisyUI e Phosphor Icons.
+Aja como um desenvolvedor frontend especializado em UI/UX moderno, com domínio em HTML, CSS, Tailwind CSS, DaisyUI e Phosphor Icons.
 
 Sua tarefa:
-Crie apenas o HTML com Tailwind CSS para uma tela de login elegante e futurista, com foco em responsividade máxima para celulares, tablets e desktops.
+Criar uma tela de login elegante e futurista, com foco em responsividade máxima para celulares, tablets e desktops.
 
-Requisitos visuais e estruturais:
+Requisitos visuais e funcionais:
 Estilo visual futurista e elegante.
 
-Tema escuro como padrão, com estrutura preparada para alternância de tema claro via botão visível (mas sem a funcionalidade JavaScript).
+Tema escuro como padrão, com alternância para tema claro via botão na interface.
 
 Cabeçalho fixo com o texto: “Tela de Login”.
 
@@ -23,20 +23,37 @@ Campo de senha, com ícone da Phosphor Icons.
 
 Checkbox de "Lembrar cadastro".
 
-Link "Esqueci a senha" com estilo de botão/link de modal, mas sem funcionalidade de abrir modal.
+Link "Esqueci a senha" que abre um modal com instruções ou formulário.
 
 Botão de login estilizado com DaisyUI.
 
-Botão de alternância de tema, com ícone de lua/sol da Phosphor Icons, estilizado visualmente (sem funcionalidade).
+Botão de alternância de tema claro/escuro, com ícone representativo.
 
-Estrutura e boas práticas:
-Utilize HTML sem nenhum script.
+Funcionalidades:
+Validação simples dos campos:
 
-Use Tailwind CSS e DaisyUI para toda a estilização.
+O campo de email deve verificar se tem formato válido.
 
-Utilize Phosphor Icons para todos os ícones decorativos.
+O campo de senha deve verificar se não está vazio.
 
-Comente as principais seções do HTML para facilitar o entendimento.
+Exiba mensagens de erro simples abaixo dos campos, caso inválidos.
 
-Mantenha o visual limpo, acessível e responsivo.
+A alternância de tema deve ser feita com JavaScript puro, respeitando o clique do usuário, e mudando as classes correspondentes do Tailwind.
 
+Tecnologias obrigatórias:
+Use HTML para estrutura.
+
+Use Tailwind CSS para estilização.
+
+Use DaisyUI para componentes.
+
+Use Phosphor Icons para ícones.
+
+Não use javascript, ou qualquer script.
+
+Extras:
+Comente as partes principais do código para facilitar entendimento.
+
+Estruture seu código de forma clara, acessível e bem organizada.
+
+Certifique-se que o visual final seja moderno, responsivo, elegante e futurista.
