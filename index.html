@@ -11,8 +11,7 @@
   
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  
- 
+
 </head>
 <body class="min-h-screen flex flex-col">
   <!-- Checkbox escondido para controle do tema -->
@@ -47,7 +46,7 @@
             <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
               <i class="ph ph-envelope text-lg"></i>
             </span>
-            <input type="email" placeholder="seu@email.com" class="input input-bordered w-full pl-10" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autofocus>
+            <input type="email" placeholder="seu@email.com" class="input input-bordered w-full pl-10 focus:ring-2 focus:ring-primary" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autofocus>
           </div>
           <div class="label hidden">
             <span class="label-text-alt text-error">Por favor, insira um email válido</span>
@@ -63,7 +62,7 @@
             <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
               <i class="ph ph-lock text-lg"></i>
             </span>
-            <input type="password" placeholder="••••••••" class="input input-bordered w-full pl-10" required>
+            <input type="password" placeholder="••••••••" class="input input-bordered w-full pl-10 focus:ring-2 focus:ring-primary" required>
           </div>
           <div class="label hidden">
             <span class="label-text-alt text-error">A senha não pode estar vazia</span>
@@ -93,7 +92,7 @@
         <!-- Adicionar divisor e opção de criar conta -->
         <div class="divider text-sm opacity-70">Não tem cadastro?</div>
 
-        <button type="button" class="btn btn-outline btn-secondary w-full">
+        <button type="button" class="btn btn-outline w-full border-2 hover:bg-base-300 hover:text-primary-content transition-all duration-300">
           <i class="ph ph-user-plus mr-2"></i>
           Criar conta
         </button>
@@ -117,7 +116,7 @@
           <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
             <i class="ph ph-envelope text-lg"></i>
           </span>
-          <input type="email" placeholder="seu@email.com" class="input input-bordered w-full pl-10" required>
+          <input type="email" placeholder="seu@email.com" class="input input-bordered w-full pl-10 focus:ring-2 focus:ring-primary" required>
         </div>
       </div>
       

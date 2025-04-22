@@ -1,46 +1,101 @@
-/* Estilo para o tema claro/escuro usando apenas CSS */
-#theme-toggle:checked ~ * {
-  --theme: light;
-}
+  /* Estilo para o tema claro/escuro usando apenas CSS */
+  #theme-toggle:checked ~ * {
+    --theme: light;
+  }
+  
+  html[data-theme="dark"] {
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    --card-bg: rgba(26, 26, 46, 0.95);
+    --card-border: rgba(103, 232, 249, 0.3);
+    --card-glow: rgba(103, 232, 249, 0.15);
+    --text-color: #e1e1e6;
+  }
+  
+  html[data-theme="light"] {
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-border: rgba(59, 130, 246, 0.5);
+    --card-glow: rgba(59, 130, 246, 0.2);
+    --text-color: #16213e;
+  }
+  
+  body {
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .login-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--card-glow);
+    border: 2px solid var(--card-border) !important;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--card-border), transparent);
+    z-index: 1;
+  }
+  
+  /* Estilo para o modal de esqueci a senha */
+  dialog {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
 
-html[data-theme="dark"] {
-  --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  --card-bg: rgba(26, 26, 46, 0.8);
-  --text-color: #e1e1e6;
-}
+  /* Adicionar contraste às bordas */
+  .input-bordered {
+    border-width: 2px !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
 
-html[data-theme="light"] {
-  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --text-color: #16213e;
-}
+  /* Estilo personalizado para o botão de criar conta */
+  .btn-outline {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
 
-body {
-  background: var(--bg-gradient);
-  color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 0.3s ease;
-}
+  html[data-theme="light"] .btn-outline {
+    border-color: rgba(0, 0, 0, 0.3) !important;
+  }
 
-.login-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para o modal de esqueci a senha */
-dialog {
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
-  max-width: 400px;
-  width: 90%;
-}
-
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-}
+  .btn-outline:hover {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3) !important;
+  }
+  
+  .input-bordered:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.25) !important;
+  }
+  
+  html[data-theme="dark"] .input-bordered {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  html[data-theme="light"] .input-bordered {
+    border-color: rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .checkbox {
+    border-width: 2px !important;
+  }
